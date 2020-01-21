@@ -5,7 +5,7 @@ services:
 
 
 before_install:
-    -docker build -t gsvaldes/react-test -f ./client/Dockerfile.dev .
+    -docker build -t gsvaldes/react-test -f ./client/Dockerfile.dev ./client
 
 script:
     - docker run -e CI=true gsvaldes/react-test npm test
